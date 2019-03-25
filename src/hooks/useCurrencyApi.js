@@ -25,16 +25,16 @@ export function useFetchCurrencyData() {
       const result = await axios.get(`${BASE_URL}`);
       const stateCurrency = result.data.rates;
       const currencyFullName = [
-      'Japan Yen', 
-      'Switzerland Franc',
+      'Canada Dollar', 
       'United State Dollar',
-      'Canada Dollar',
-      'South Korean Won',
-      'Singapore Dollar',
+      'Switzerland Franc',
+      'Japan Yen',
       'Malaysia Ringgit',
-      'Great Britain Pound',
       'Indonesian Rupiah',
-      'India Rupee'
+      'Great Britain Pound',
+      'Singapore Dollar',
+      'India Rupee',
+      'South Korea Won'
     ];
       setCurrencies(
         Object.keys(stateCurrency)
