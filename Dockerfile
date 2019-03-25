@@ -1,4 +1,5 @@
-FROM nginx:alpine
-COPY /build /usr/share/nginx/html
-EXPOSE 80
-CMD [“nginx”, “-g”, “daemon off;”]
+FROM node:8 as react-build
+WORKDIR /app
+COPY . ./
+RUN npm
+RUN npm build
